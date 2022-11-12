@@ -2,6 +2,15 @@
     font-family: system-ui !important;
 }
 
+.el-message {
+    filter: opacity(0.3);
+}
+.el-message.el-message--error {
+    /*block error msg*/
+     display: none;
+}
+
+
 div#app {
     background-color: #3e3e3e;
     /*noinspection CssUnknownTarget*/
