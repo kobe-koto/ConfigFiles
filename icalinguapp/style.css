@@ -10,7 +10,6 @@
      display: none;
 }
 
-
 div#app {
     background-color: #3e3e3e;
     /*noinspection CssUnknownTarget*/
@@ -258,9 +257,12 @@ div.stickers_dir[data-v-1d0d9516] {
 }
 
 .vac-icon-scroll {
-    right: 5px;
-    transform: scale(0.7);
+    right: 10px;
     margin-bottom: -5px;
+    background-color: #232323
+}
+.vac-icon-scroll svg path {
+    fill: #ffffff;
 }
 
 div.entry[data-v-7bdba32c]{
