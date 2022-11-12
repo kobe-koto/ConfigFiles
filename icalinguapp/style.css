@@ -1,0 +1,273 @@
+* {
+    font-family: system-ui !important;
+}
+
+div#app {
+    background-color: #3e3e3e;
+    /*noinspection CssUnknownTarget*/
+    background-image: url("file:///home/koto/.config/icalingua/FZY0HydVEAERxvb.png");
+}
+
+.head[data-v-0239dd47] { /*左上角头像和搜索*/
+    border-radius: 50px;
+    margin-bottom: 5px;
+}
+
+.el-input--prefix .el-input__inner { /*Search*/
+    border-radius: 25px;
+}
+
+.el-icon-user:before {
+    color: #ffffff;
+}
+.content a .root:hover {
+    transform:translateY(-3px) !important;
+}
+.content a .root {
+    transition: all ease 0.3s;
+    border-radius: 55px;
+    padding-right: 15px;
+}
+.root[data-v-0239dd47] {
+    height: 100%;
+    margin-bottom: 10px;
+}
+div.entry[data-v-7bdba32c] {
+    padding: 6px 0;
+}
+.vac-textarea {
+    border-radius: 25px;
+    color: #232323;
+}
+
+.title a.selected[data-v-1d0d9516]{
+    transition: none;
+}
+
+div[data-v-6d975e7c].category.active .svg svg,div[data-v-6d975e7c].category:hover .svg svg {
+    fill: #ffffff;
+}
+div[data-v-6d975e7c].category.active .svg svg {
+    transition: all ease 0.25s;
+}
+
+.vac-col-messages {
+    backdrop-filter: blur(15px);
+}
+
+*{
+    transition: all ease 0.5s;
+    --chat-message-color-timestamp: #202020; /*发送时间*/
+    --chat-bg-color-input: #fffffff0;
+    --chat-footer-bg-color: #000000ad;
+    --chat-message-bg-color: rgba(0,0,0,.75);
+    --chat-message-bg-color-me: rgb(240,144,141);
+    --chat-header-bg-color: rgba(0,0,0,.75);
+    font-family: 'HarmonyOS Sans SC', 'Noto Sans CJK SC', 'Noto Color Emoji', sans-serif, system-ui;
+    --panel-header-bg: rgb(240,144,141);
+    --panel-item-bg-hover: #d5dce54a;
+    --panel-item-bg: rgba(255,255,255,0.25);
+    --chat-content-bg-color: rgba(0,0,0,.45)!important;
+    --panel-background: rgba(0,0,0,.45)!important;
+    --chat-message-bg-color-reply: rgb(0 0 0 / 3%);
+    --chat-message-bg-color-deleted: #dadfe285;
+    --ep-color-active: rgb(240,144,141) !important;
+    --panel-color-sticker-type-selected: rgb(240,144,141) !important;
+    --panel-color-sticker-type-hover: rgb(240,144,141) !important;
+}
+
+.vac-message-card.vac-message-current {
+    color: #000000; /*自己的消息*/
+}
+span[data-v-7e38bde8] {
+    color: #9a9a9a;
+}
+.grid>div[data-v-1d0d9516] {
+    background-color: rgba(0,0,0,0)
+}
+.vac-message-deleted[data-v-7e38bde8] {
+    background: #44444485 !important;
+}
+
+.container-search input[data-v-839ecda0] {
+    border: none;
+    border-radius: 20px;
+}
+
+div.head[data-v-1d0d9516] { /*表情面板*/
+    height: 35px;
+    min-height: 35px;
+    padding: 0 0;
+    background-color: var(--panel-header-bg);
+}
+
+.bg[data-v-1d0d9516] { /*表情面板*/
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+    margin: 10px 10px 10px 0;
+    padding: 10px;
+    backdrop-filter: blur(15px);
+}
+.bg[data-v-1d0d9516] .head {
+    background-color: rgba(0,0,0,0) !important;
+}
+div.stickers_dir[data-v-1d0d9516] {
+    display: none;
+}
+
+.el-message--success {
+    background-color: #f0f9ebdb;
+}
+
+.el-message {
+    min-width: auto;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    margin-top: 5px;
+    padding: 10px 10px 10px 10px;
+}
+
+.panel-right {
+    background: rgba(0,0,0,0)!important;
+    border: none!important;
+}
+
+.icalingua-theme-holder {
+    background: rgba(0,0,0,0)!important;
+}
+
+.root {
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.selected {
+    box-shadow: 0 0 10px rgba(0,0,0,0.1)!important;
+}
+
+
+
+.entry {
+    border: none!important;
+}
+
+/*.head {
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+
+}*/
+
+.content {
+    padding-right: 10px;
+}
+.root {
+    border: none!important;
+}
+
+.root[data-v-7bdba32c] {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+::-webkit-scrollbar-thumb { /*滚动条*/
+    background-color: #99999952 !important;
+}
+
+::-webkit-scrollbar-thumb:hover { /*滚动条*/
+    background-color: #ffffff52 !important;
+}
+
+.el-main.multipane.layout-v {
+    margin: 0!important;
+    overflow: hidden;
+}
+
+.vac-room-header.vac-app-border-b { /*对话名显示*/
+    position: absolute;
+    top: 0;
+    height: 69px;
+    backdrop-filter: blur(10px);
+    left: 0;
+    background-color: #000000d4;
+}
+
+.vac-container-scroll {
+    margin-top: 0;
+    padding-bottom: 80px;
+}
+
+.vac-card-window {
+    margin: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    min-height: auto;
+}
+
+.el-dialog {
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.v-modal {
+    display: none;
+}
+
+.vac-message-current *{
+    --chat-message-color-timestamp: #ffffffe0!important;
+}
+
+.panel.rooms-panel {
+    border-radius: 10px;
+    margin: 10px 0 10px 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    overflow: hidden;
+}
+
+.vac-room-footer {
+    position: absolute;
+    backdrop-filter: blur(5px);
+    bottom: 0;
+}
+
+.vac-message-current * {
+    --chat-message-color-timestamp: #878787!important;
+}
+
+.getting-history[data-v-cac5798a] {
+    visibility: hidden;
+}
+
+.vac-icon-last-message {
+    top: 75px;
+    right: 5px;
+    transform: scale(0.7);
+}
+
+.vac-icon-scroll {
+    right: 5px;
+    transform: scale(0.7);
+    margin-bottom: -5px;
+}
+
+div.entry[data-v-7bdba32c]{
+    padding: 9px 0;
+}
+
+.el-dialog__body {
+    padding: 0 20px 20px 20px;
+}
+
+.groupmember-head-container {
+    padding-bottom: 15px;
+}
+
+.vac-container-scroll {
+    background: none;
+    margin-right: 8px;
+    margin-left: 8px;
+}
