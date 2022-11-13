@@ -3,6 +3,8 @@
 :root {
     --MainColor: rgb(240,144,141);
     --BackgroundImage: url("./background.png");
+    --BackgroundImage: url("file:///home/koto/Pictures/Fd5AsVkVUAA8lds.jpeg");
+
 }
 
 html,body {
@@ -20,6 +22,9 @@ body {
 }
 .contacts-head-container div.contacts-head span.el-icon-refresh-right.contacts-refresh {
     color: #ffffff
+}
+div[data-v-cac5798a].panel.rooms-panel {
+    backdrop-filter: blur(15px);
 }
 
 div.el-dialog__wrapper.dialog {
@@ -173,7 +178,7 @@ div[data-v-6d975e7c].category.active .svg svg {
     backdrop-filter: blur(15px);
 }
 
-.vac-card-system[data-v-7e38bde8] {
+.vac-card-info[data-v-7e38bde8] {
     border-radius: 45px;
     padding: 10px;
 }
@@ -292,7 +297,7 @@ div.stickers_dir[data-v-1d0d9516] {
     height: 69px;
     backdrop-filter: blur(10px);
     left: 0;
-    background-color: #000000d4;
+    background-color: #000000ad;
 }
 
 .vac-container-scroll {
