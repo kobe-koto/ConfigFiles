@@ -407,6 +407,23 @@ div[data-v-cac5798a].vac-card-window {
     width: 0;
     border-radius: 0 25px 25px 0;
 }
+.panel.rooms-panel.avatar-only div.entry[data-v-7bdba32c] > div.right[data-v-7bdba32c] {
+    display: block;
+}
+.panel.rooms-panel.avatar-only div.entry[data-v-7bdba32c] > div.right[data-v-7bdba32c] > .flex.l1,
+.panel.rooms-panel.avatar-only div.entry[data-v-7bdba32c] > div.right[data-v-7bdba32c] > .flex > .desc {
+    display: none;
+}
+.panel.rooms-panel.avatar-only div.entry[data-v-7bdba32c] > div.right[data-v-7bdba32c] > .flex .el-badge {
+    display: block;
+    position: absolute;
+    top: 40px;
+    left: 35px;
+}
+
+.el-badge__content.is-fixed {
+    right: 15px;
+}
 
 .vac-room-footer {
     position: absolute;
