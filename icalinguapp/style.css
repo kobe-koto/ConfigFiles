@@ -257,12 +257,18 @@ div.head[data-v-1d0d9516] { /*表情面板*/
     background-color: var(--panel-header-bg);
 }
 
+
+div.el-main.layout-v > div.[data-v-cac5798a].panel.panel-right {
+    padding-bottom: 20px;
+}
 .bg[data-v-1d0d9516] { /*表情面板*/
     border-radius: 10px;
     box-shadow: 0 0 10px rgb(0 0 0 / 30%);
     margin: 10px 10px 10px 0;
     padding: 10px;
     backdrop-filter: blur(15px);
+    height: 100%;
+    box-sizing: border-box;
 }
 .bg[data-v-1d0d9516] .head {
     background-color: rgba(0,0,0,0) !important;
