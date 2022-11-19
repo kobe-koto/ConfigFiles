@@ -1,10 +1,11 @@
 @charset "UTF-8";
 
+/*noinspection CssUnknownTarget,CssOverwrittenProperties*/
 :root {
     --MainColor: rgb(240,144,141);
+    --MainColorPrimary: rgb(255,188,188);
     --BackgroundImage: url("./background.png");
     --BackgroundImage: url("file:///home/koto/Pictures/Fd5AsVkVUAA8lds.jpeg");
-
 }
 
 html,body {
@@ -46,6 +47,37 @@ div.el-dialog__wrapper.dialog div.el-dialog {
 /*noinspection SpellCheckingInspection*/
 i.el-dialog__headerbtn.el-dialog__close {
     color: var(--MainColor);
+}
+
+div#login[data-v-19244df7] {
+    background-image: none;
+}
+form.login-box[data-v-19244df7] {
+    backdrop-filter: blur(10px);
+    background-color: rgba(0,0,0,.35);
+    color: #ffffff;
+    padding: 20px 30px;
+    text-align: center;
+}
+
+form.login-box[data-v-19244df7] > div.el-form-item .el-form-item__label {
+    color: #ffffff !important;
+}
+
+/*noinspection SpellCheckingInspection*/
+div.el-form-item.nobottmar.is-no-asterisk[data-v-19244df7] > div.el-form-item__content {
+    display: inline-flex;
+    align-items: center;
+}
+/*noinspection SpellCheckingInspection*/
+div.el-form-item.nobottmar.is-no-asterisk[data-v-19244df7] > div.el-form-item__content > span.el-form-item__label {
+    padding: 0;
+}
+
+
+
+div.vac-container-scroll {
+    padding-top: 55px;
 }
 
 div[data-v-0f8ddd0e] {
@@ -91,19 +123,36 @@ div.el-collapse-item__header.is-active {
 }
 .el-popover {
     border: none;
-    background: #000000;
+    transform-origin: left center;
+    z-index: 2055;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(10px);
 }
 .el-popover .el-popover__title {
     color: #ffffff;
+}
+.el-popover.el-popper .popper__arrow {
+    display: none;
 }
 
 div[data-v-194abe54] {/*轉發的訊息*/
     margin-top: 0!important;
 }
 
+.el-button {
+    background: var(--MainColor);
+    border-color: var(--MainColor);
+}
+.el-button:hover {
+    background-color: var(--MainColorPrimary);
+    border-color: var(--MainColorPrimary);
+}
+
 *{
     transition: all ease .45s;
     --chat-message-color-timestamp: #202020; /*发送时间*/
+    --chat-message-bg-color-selected: var(--MainColorPrimary);
     --chat-bg-color-input: #fffffff0;
     --chat-footer-bg-color: #000000ad;
     --chat-message-bg-color: rgba(0,0,0,.75);
@@ -305,7 +354,7 @@ div.stickers_dir[data-v-1d0d9516] {
     padding-bottom: 80px;
 }
 
-.vac-card-window {
+div[data-v-cac5798a].vac-card-window {
     margin: 10px;
     box-shadow: 0 0 20px rgba(0,0,0,0.2);
     border-radius: 10px;
@@ -334,6 +383,29 @@ div.stickers_dir[data-v-1d0d9516] {
     margin: 10px 0 10px 10px;
     box-shadow: 0 0 20px rgba(0,0,0,0.3);
     overflow: hidden;
+}
+.panel.rooms-panel.avatar-only {
+    border-radius: 10px;
+    margin: 10px 0 10px 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    overflow: hidden;
+}
+
+.panel.rooms-panel.avatar-only > div.root > div.head[data-v-0239dd47] {
+    align-items: center;
+    justify-content: center;
+    background: none;
+}
+.panel.rooms-panel.avatar-only > div.root > div.head[data-v-0239dd47] .el-avatar.el-avatar--circle {
+    border-width: 10px;
+    border-color: var(--MainColor);
+    border-style: solid;
+    box-sizing: content-box;
+}
+
+.panel.rooms-panel.avatar-only .content a .root {
+    width: 0;
+    border-radius: 0 25px 25px 0;
 }
 
 .vac-room-footer {
