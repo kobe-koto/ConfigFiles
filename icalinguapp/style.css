@@ -109,9 +109,9 @@ form.login-box[data-v-19244df7] > div.el-form-item .el-form-item__label {
     border-color: #1f1f1f;
 }
 .el-input__inner {
-    background-color: #232323;
-    border-color: #232323;
-    color: #ffffff;
+    background-color: #232323 !important;
+    border-color: #232323 !important;
+    color: #ffffff !important;
 }
 .el-input.is-active .el-input__inner, .el-input__inner:focus {
     border-color: var(--MainColor)
@@ -518,6 +518,38 @@ div[data-v-cac5798a].vac-card-window {
 .vac-icon-last-message, .vac-icon-scroll {
     background-color: #232323
 }
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.vac-bounce-leave-active.vac-bounce-leave-to {
+    animation: vac-bounce-in .3s reverse;
+    transform: scale(0);
+}
+
+/*.dialog-fade-leave-active.dialog-fade-leave-to {
+    animation: ZoomOut 0.45s ease;
+    transform: translateY(00vh);
+    opacity: 0;
+}*/
+
+/*@keyframes ZoomOut {
+    000% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}*/
+@keyframes fadeOut {
+    000% {
+        transform: translateY(-100vh);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(90vh);
+        opacity: 0;
+    }
+}
+
 .vac-icon-last-message {
     top: 75px;
     right: 5px;
