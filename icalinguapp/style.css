@@ -18,23 +18,52 @@ body {
     background-size: cover;
     background-position: center top;
 }
+
+/*noinspection SpellCheckingInspection*/
+.el-dialog__headerbtn:focus .el-dialog__close, .el-dialog__headerbtn:hover .el-dialog__close {
+    color: var(--MainColor)
+}
+
 .contacts-head-container {
     background: none;
 }
 .contacts-head-container div.contacts-head span.el-icon-refresh-right.contacts-refresh {
     color: #ffffff
 }
+span.el-icon-refresh-right:hover {
+    color: var(--MainColor);
+}
 div[data-v-cac5798a].panel.rooms-panel {
     backdrop-filter: blur(15px);
 }
 
-div.el-dialog__wrapper.dialog {
+div.el-dialog__wrapper {
     background: rgba(0,0,0,0.75);
     backdrop-filter: blur(15px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 div.el-dialog__wrapper.dialog div.el-dialog {
     background: rgb(0,0,0);
 }
+.el-dialog {
+    backdrop-filter: blur(15px);
+    width: 30%;
+    height: fit-content;
+    margin: 0 !important;
+    min-width: 50%;
+}
+
+
+.el-dialog__header {
+    background-color: rgba(239,239,239,.55);
+}
+div.el-dialog__wrapper.dialog .el-dialog__header {
+    background-color: rgba(0,0,0);
+}
+
+
 .el-tabs__item.is-active, div.el-tabs__item.is-top:hover {
     color: var(--MainColor);
 }
@@ -49,6 +78,7 @@ i.el-dialog__headerbtn.el-dialog__close {
     color: var(--MainColor);
 }
 
+
 div#login[data-v-19244df7] {
     background-image: none;
 }
@@ -58,10 +88,42 @@ form.login-box[data-v-19244df7] {
     color: #ffffff;
     padding: 20px 30px;
     text-align: center;
+    margin: 0;
 }
 
 form.login-box[data-v-19244df7] > div.el-form-item .el-form-item__label {
     color: #ffffff !important;
+}
+.el-radio-button__orig-radio:checked + .el-radio-button__inner {
+    background-color: var(--MainColor);
+    border-color: var(--MainColor);
+}
+.el-radio-button__inner:hover {
+    color: var(--MainColor);
+}
+.el-radio-button__inner {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    background-color: #1f1f1f;
+    color: #ffffff;
+    border-color: #1f1f1f;
+}
+.el-input__inner {
+    background-color: #232323;
+    border-color: #232323;
+    color: #ffffff;
+}
+.el-input.is-active .el-input__inner, .el-input__inner:focus {
+    border-color: var(--MainColor)
+}
+.el-switch.is-checked .el-switch__core {
+    background-color: var(--MainColor);
+    border-color: var(--MainColor);
+}
+.el-button--primary.is-disabled, .el-button--primary.is-disabled:active, .el-button--primary.is-disabled:focus, .el-button--primary.is-disabled:hover {
+    border-color: var(--MainColorPrimary);
+    background-color: var(--MainColorPrimary);
+    color: #000000;
 }
 
 /*noinspection SpellCheckingInspection*/
@@ -147,11 +209,12 @@ div[data-v-194abe54] {/*轉發的訊息*/
 .el-button:hover {
     background-color: var(--MainColorPrimary);
     border-color: var(--MainColorPrimary);
+    color: #ffffff;
 }
 
 *{
     transition: all ease .45s;
-    --chat-message-color-timestamp: #202020; /*发送时间*/
+    --chat-message-color-timestamp: #9a9a9a; /*发送时间*/
     --chat-message-bg-color-selected: var(--MainColorPrimary);
     --chat-bg-color-input: #fffffff0;
     --chat-footer-bg-color: #000000ad;
@@ -170,6 +233,7 @@ div[data-v-194abe54] {/*轉發的訊息*/
     --panel-color-sticker-type-selected: var(--MainColor) !important;
     --panel-color-sticker-type-hover: var(--MainColor) !important;
     --chat-icon-color-dropdown-scroll: #ffffff !important;
+    --chat-message-bg-color-scroll-counter: var(--MainColor) !important;
 }
 
 .el-message {
@@ -178,6 +242,9 @@ div[data-v-194abe54] {/*轉發的訊息*/
 .el-message.el-message--error {
     /*block error msg*/
      display: none;
+}
+.vac-badge-counter {
+    border-radius: 15px;
 }
 
 .head[data-v-0239dd47] { /*左上角头像和搜索*/
@@ -210,6 +277,8 @@ div.entry[data-v-7bdba32c] {
 .vac-textarea {
     border-radius: 25px;
     color: #232323;
+    background-color: #2a2a2a;
+    caret-color: #ffffff;
 }
 
 .title a.selected[data-v-1d0d9516]{
@@ -233,10 +302,10 @@ div[data-v-6d975e7c].category.active .svg svg {
 }
 
 .vac-message-card.vac-message-current {
-    color: #000000; /*自己的消息*/
+    color: #ffffff; /*自己的消息*/
 }
-span[data-v-7e38bde8] {
-    color: #9a9a9a;
+.vac-message-card.vac-message-current .vac-text-timestamp {
+    color: #efefef;
 }
 .grid>div[data-v-1d0d9516] {
     background-color: rgba(0,0,0,0)
@@ -258,9 +327,10 @@ div.head[data-v-1d0d9516] { /*表情面板*/
 }
 
 
-div.el-main.layout-v > div.[data-v-cac5798a].panel.panel-right {
+div.el-main.layout-v > div[data-v-cac5798a].panel.panel-right {
     padding-bottom: 20px;
 }
+
 .bg[data-v-1d0d9516] { /*表情面板*/
     border-radius: 10px;
     box-shadow: 0 0 10px rgb(0 0 0 / 30%);
@@ -424,7 +494,7 @@ div[data-v-cac5798a].vac-card-window {
     display: block;
     position: absolute;
     top: 40px;
-    left: 35px;
+    right: -40px;
 }
 
 .el-badge__content.is-fixed {
@@ -445,19 +515,19 @@ div[data-v-cac5798a].vac-card-window {
     visibility: hidden;
 }
 
+.vac-icon-last-message, .vac-icon-scroll {
+    background-color: #232323
+}
 .vac-icon-last-message {
     top: 75px;
     right: 5px;
-    transform: scale(0.7);
 }
-
 .vac-icon-scroll {
     right: 10px;
     margin-bottom: -5px;
-    background-color: #232323
 }
-.vac-icon-scroll svg path {
-    fill: #ffffff;
+.vac-icon-scroll svg path, .vac-icon-last-message svg path {
+    fill: #ffffff !important;
 }
 
 div.entry[data-v-7bdba32c]{
@@ -470,6 +540,7 @@ div.entry[data-v-7bdba32c]{
 
 .groupmember-head-container {
     padding-bottom: 15px;
+    background-color: transparent;
 }
 
 .vac-container-scroll {
