@@ -20,7 +20,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "last_opened_file_path": "/home/koto/Documents/GitHub/Auto-Proxy",
+    "last_opened_file_path": "/home/koto/Documents/GitHub/blog",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "settings.editor.selected.configurable": "preferences.lookFeel"
@@ -40,6 +40,10 @@
       <workItem from="1668858125211" duration="530000" />
       <workItem from="1668932735936" duration="1092000" />
       <workItem from="1668934416648" duration="65000" />
+      <workItem from="1669530618879" duration="373000" />
+      <workItem from="1669533418218" duration="817000" />
+      <workItem from="1669534312157" duration="454000" />
+      <workItem from="1669538919143" duration="54000" />
     </task>
     <servers />
   </component>

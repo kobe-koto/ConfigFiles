@@ -17,21 +17,64 @@ body {
     background-image: var(--BackgroundImage);
     background-size: cover;
     background-position: center top;
+    background-attachment: fixed;
+    font-family: sans-serif, system-ui !important;
+}
+* {
+    transition: all ease .45s;
 }
 
+/*SMS Code Auth*/
+.el-drawer.btt {
+    background-color: #1f1f1f;
+    color: #f8f8ff;
+}
+.el-drawer.btt > .el-drawer__body > center[data-v-19244df7] {
+    margin: 20px 0;
+}
+.el-drawer.btt > .el-drawer__body {
+    padding: 0 20px;
+}
+
+.el-radio-button__orig-radio:disabled+.el-radio-button__inner {
+    background-color: #232323;
+    border-color: #303030;
+}
+.el-radio-button__orig-radio:disabled:checked+.el-radio-button__inner {
+    background-color: #232323;
+}
+
+/*Buttons Hover Color*/
 /*noinspection SpellCheckingInspection*/
-.el-dialog__headerbtn:focus .el-dialog__close, .el-dialog__headerbtn:hover .el-dialog__close {
-    color: var(--MainColor)
+.el-dialog__headerbtn:focus .el-dialog__close {
+    color: var(--MainColor) !important;
+}
+/*noinspection SpellCheckingInspection*/
+.el-dialog__headerbtn:hover .el-dialog__close {
+    color: var(--MainColor) !important;
+}
+span.el-icon-refresh-right:hover {
+    color: var(--MainColor) !important;
+}
+.el-radio-button__inner:hover {
+    color: var(--MainColor) !important;
+}
+/*noinspection SpellCheckingInspection*/
+.el-dialog__headerbtn.el-dialog__close {
+    color: var(--MainColor) !important;
+}
+.el-tabs__item.is-active {
+    color: var(--MainColor) !important;
+}
+.el-tabs__item:hover {
+    color: var(--MainColor) !important;
 }
 
 .contacts-head-container {
     background: none;
 }
-.contacts-head-container div.contacts-head span.el-icon-refresh-right.contacts-refresh {
+span.el-icon-refresh-right {
     color: #ffffff
-}
-span.el-icon-refresh-right:hover {
-    color: var(--MainColor);
 }
 div[data-v-cac5798a].panel.rooms-panel {
     backdrop-filter: blur(15px);
@@ -64,27 +107,22 @@ div.el-dialog__wrapper.dialog .el-dialog__header {
 }
 
 
-.el-tabs__item.is-active, div.el-tabs__item.is-top:hover {
-    color: var(--MainColor);
-}
 .el-tabs__active-bar {
     background-color: var(--MainColor);
 }
 .el-collapse {
     border: none;
 }
-/*noinspection SpellCheckingInspection*/
-i.el-dialog__headerbtn.el-dialog__close {
-    color: var(--MainColor);
-}
 
 
 div#login[data-v-19244df7] {
     background-image: none;
-}
-form.login-box[data-v-19244df7] {
     backdrop-filter: blur(10px);
     background-color: rgba(0,0,0,.35);
+    min-height: 100%;
+    height: auto;
+}
+form.login-box[data-v-19244df7] {
     color: #ffffff;
     padding: 20px 30px;
     text-align: center;
@@ -98,8 +136,8 @@ form.login-box[data-v-19244df7] > div.el-form-item .el-form-item__label {
     background-color: var(--MainColor);
     border-color: var(--MainColor);
 }
-.el-radio-button__inner:hover {
-    color: var(--MainColor);
+.el-radio-button__orig-radio:checked + .el-radio-button__inner:hover {
+    color: #ffffff !important;
 }
 .el-radio-button__inner {
     box-shadow: none;
@@ -112,9 +150,22 @@ form.login-box[data-v-19244df7] > div.el-form-item .el-form-item__label {
     background-color: #232323 !important;
     border-color: #232323 !important;
     color: #ffffff !important;
+    border-radius: 25px;
+    padding: 20px;
+}
+.el-radio-button:first-child .el-radio-button__inner {
+    border-left: none;
 }
 .el-input.is-active .el-input__inner, .el-input__inner:focus {
     border-color: var(--MainColor)
+}
+.el-radio-button__orig-radio:checked+.el-radio-button__inner {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.el-switch__core {
+    border: 1px solid #232323;
+    background: #232323;
 }
 .el-switch.is-checked .el-switch__core {
     background-color: var(--MainColor);
@@ -136,6 +187,29 @@ div.el-form-item.nobottmar.is-no-asterisk[data-v-19244df7] > div.el-form-item__c
     padding: 0;
 }
 
+.el-select-dropdown {
+    background-color: #232323;
+    border: none;
+}
+.el-select-dropdown__item {
+    color: #f8f8ff;
+}
+.selected {
+    box-shadow: 0 0 10px rgba(255,255,255,0.1)!important;
+    background-color: rgba(255,255,255,0.1);
+    color: var(--MainColor)!important;
+}
+.el-select-dropdown__item.hover, .el-select-dropdown__item:hover {
+    background-color: #F5F7FA;
+    color: #606266;
+}
+
+
+
+.el-popper[x-placement^=bottom] .popper__arrow,
+.el-popper[x-placement^=bottom] .popper__arrow::after {
+    border-bottom-color: #232323;
+}
 
 
 div.vac-container-scroll {
@@ -152,34 +226,42 @@ div[data-v-0f8ddd0e] {
     backdrop-filter: blur(10px);
 }
 
-div#pane-groups.el-tab-pane>div>div.contact-entry-root:hover {
-    transform:translateY(-3px) !important;
-}
-div#pane-groups.el-tab-pane>div>div.contact-entry-root {
-    transition: all ease .35s;
-    border-radius: 35px;
-}
 div#pane-groups.el-tab-pane>div {
     margin-top: 10px;
 }
 
-div.el-collapse-item__header,div.el-collapse-item {
+div.el-collapse-item__header,
+div.el-collapse-item,
+div#pane-groups.el-tab-pane>div>div.contact-entry-root,
+div.groupmember-content > div {
     transition: all ease .35s;
-    border-radius: 25px;
+    border-radius: 35px;
 }
-div.el-collapse-item {
+div.el-collapse-item,
+div.groupmember-content > div {
     overflow: hidden;
     margin-top: 10px;
 }
-div.el-collapse-item:hover {
+div.el-collapse-item:hover,
+div#pane-groups.el-tab-pane>div>div.contact-entry-root:hover,
+div.groupmember-content > div:hover {
     transform: translateY(-3px);
-    background-color: rgba(255,255,255,.35);
+    background-color: #232323;
+}
+.el-collapse-item__content {
+    background-color: #303030;
+}
+div.el-collapse-item.is-active {
+    transform:none !important;
 }
 div.el-collapse-item__header.is-active {
-    transform:none !important;
-    background-color: rgba(255,255,255,.45);
-    border-radius: 25px 25px 0 0;
+    background-color: #303030;
+    border-radius: 35px 35px 0 0;
 }
+.contact-entry-root:hover {
+    background-color: transparent;
+}
+
 .contacts-content {
     overflow-y: scroll;
 }
@@ -205,6 +287,8 @@ div[data-v-194abe54] {/*轉發的訊息*/
 .el-button {
     background: var(--MainColor);
     border-color: var(--MainColor);
+    color: #f8f8ff;
+    border-radius: 25px;
 }
 .el-button:hover {
     background-color: var(--MainColorPrimary);
@@ -212,28 +296,15 @@ div[data-v-194abe54] {/*轉發的訊息*/
     color: #ffffff;
 }
 
-*{
-    transition: all ease .45s;
-    --chat-message-color-timestamp: #9a9a9a; /*发送时间*/
-    --chat-message-bg-color-selected: var(--MainColorPrimary);
-    --chat-bg-color-input: #fffffff0;
-    --chat-footer-bg-color: #000000ad;
-    --chat-message-bg-color: rgba(0,0,0,.75);
-    --chat-message-bg-color-me: var(--MainColor);
-    --chat-header-bg-color: rgba(0,0,0,.75);
-    font-family: sans-serif, system-ui !important;
-    --panel-header-bg: var(--MainColor);
-    --panel-item-bg-hover: #d5dce54a;
-    --panel-item-bg: rgba(255,255,255,0.25);
-    --chat-content-bg-color: rgba(0,0,0,.45)!important;
-    --panel-background: rgba(0,0,0,.45)!important;
-    --chat-message-bg-color-reply: rgb(0 0 0 / 3%);
-    --chat-message-bg-color-deleted: #dadfe285;
-    --ep-color-active: var(--MainColor) !important;
-    --panel-color-sticker-type-selected: var(--MainColor) !important;
-    --panel-color-sticker-type-hover: var(--MainColor) !important;
-    --chat-icon-color-dropdown-scroll: #ffffff !important;
-    --chat-message-bg-color-scroll-counter: var(--MainColor) !important;
+/* animation fix */
+.vac-bounce-leave-active.vac-bounce-leave-to {
+    animation: vac-bounce-in .3s reverse;
+    transform: scale(0);
+}
+
+.dialog-fade-leave-active {
+    animation: dialog-fade-out .3s;
+    opacity: 0;
 }
 
 .el-message {
@@ -276,8 +347,8 @@ div.entry[data-v-7bdba32c] {
 }
 .vac-textarea {
     border-radius: 25px;
-    color: #232323;
-    background-color: #2a2a2a;
+    color: #ffffff;
+    background-color: #232323;
     caret-color: #ffffff;
 }
 
@@ -519,37 +590,6 @@ div[data-v-cac5798a].vac-card-window {
     background-color: #232323
 }
 
-/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-.vac-bounce-leave-active.vac-bounce-leave-to {
-    animation: vac-bounce-in .3s reverse;
-    transform: scale(0);
-}
-
-/*.dialog-fade-leave-active.dialog-fade-leave-to {
-    animation: ZoomOut 0.45s ease;
-    transform: translateY(00vh);
-    opacity: 0;
-}*/
-
-/*@keyframes ZoomOut {
-    000% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(0);
-    }
-}*/
-@keyframes fadeOut {
-    000% {
-        transform: translateY(-100vh);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(90vh);
-        opacity: 0;
-    }
-}
-
 .vac-icon-last-message {
     top: 75px;
     right: 5px;
@@ -579,4 +619,26 @@ div.entry[data-v-7bdba32c]{
     background: none;
     margin-right: 8px;
     margin-left: 8px;
+}
+
+div[data-v-cac5798a].icalingua-theme-holder {
+    --chat-message-color-timestamp: #9a9a9a                     !important; /*发送时间*/
+    --chat-message-bg-color-selected: var(--MainColorPrimary)   !important;
+    --chat-bg-color-input: #fffffff0                            !important;
+    --chat-footer-bg-color: #000000ad                           !important;
+    --chat-message-bg-color: rgba(0,0,0,.75)                    !important;
+    --chat-message-bg-color-me: var(--MainColor)                !important;
+    --chat-header-bg-color: rgba(0,0,0,.75)                     !important;
+    --panel-header-bg: var(--MainColor)                         !important;
+    --panel-item-bg-hover: #d5dce54a                            !important;
+    --panel-item-bg: rgba(255,255,255,0.25)                     !important;
+    --chat-content-bg-color: rgba(0,0,0,.45)                    !important;
+    --panel-background: rgba(0,0,0,.45)                         !important;
+    --chat-message-bg-color-reply: rgb(0 0 0 / 3%)              !important;
+    --chat-message-bg-color-deleted: #dadfe285                  !important;
+    --ep-color-active: var(--MainColor)                         !important;
+    --panel-color-sticker-type-selected: var(--MainColor)       !important;
+    --panel-color-sticker-type-hover: var(--MainColor)          !important;
+    --chat-icon-color-dropdown-scroll: #ffffff                  !important;
+    --chat-message-bg-color-scroll-counter: var(--MainColor)    !important;
 }
