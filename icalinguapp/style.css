@@ -194,8 +194,6 @@ div.el-form-item.nobottmar.is-no-asterisk[data-v-19244df7] > div.el-form-item__c
     color: #f8f8ff;
 }
 .selected {
-    box-shadow: 0 0 10px rgba(255,255,255,0.1)!important;
-    background-color: rgba(255,255,255,0.1);
     color: var(--MainColor)!important;
 }
 .el-select-dropdown__item.hover, .el-select-dropdown__item:hover {
@@ -281,6 +279,8 @@ div.el-collapse-item__header.is-active {
 
 div[data-v-194abe54] {/*轉發的訊息*/
     margin-top: 0!important;
+    margin: 10px;
+    border-radius: 10px;
 }
 
 .el-button {
@@ -366,9 +366,9 @@ div[data-v-6d975e7c].category.active .svg svg {
     backdrop-filter: blur(15px);
 }
 
-.vac-card-info[data-v-7e38bde8] {
-    border-radius: 45px;
-    padding: 10px;
+.vac-card-info {
+    border-radius: 45px !important;
+    padding: 10px !important;
 }
 
 .vac-message-card.vac-message-current {
@@ -397,11 +397,11 @@ div.head[data-v-1d0d9516] { /*表情面板*/
 }
 
 
-div.el-main.layout-v > div[data-v-cac5798a].panel.panel-right {
+div.el-main.layout-v > div.panel.panel-right {
     padding-bottom: 20px;
 }
 
-.bg[data-v-1d0d9516] { /*表情面板*/
+.bg { /*表情面板*/
     border-radius: 10px;
     box-shadow: 0 0 10px rgb(0 0 0 / 30%);
     margin: 10px 10px 10px 0;
@@ -410,11 +410,16 @@ div.el-main.layout-v > div[data-v-cac5798a].panel.panel-right {
     height: 100%;
     box-sizing: border-box;
 }
-.bg[data-v-1d0d9516] .head {
+.bg .head {
     background-color: rgba(0,0,0,0) !important;
 }
-div.stickers_dir[data-v-1d0d9516] {
-    display: none;
+
+div.bg > div > div > div {
+    background-color: rgba(0,0,0,0) !important;
+}
+
+div.stickers_dir {
+    display: none !important;
 }
 
 .el-message--success {
