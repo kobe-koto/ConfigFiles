@@ -75,7 +75,7 @@ span.el-icon-refresh-right:hover {
 span.el-icon-refresh-right {
     color: #ffffff
 }
-div[data-v-cac5798a].panel.rooms-panel {
+div.panel.rooms-panel {
     backdrop-filter: blur(15px);
 }
 
@@ -114,21 +114,21 @@ div.el-dialog__wrapper.dialog .el-dialog__header {
 }
 
 
-div#login[data-v-19244df7] {
-    background-image: none;
+div#login {
+    background-image: none !important;
+    height: auto !important;
     backdrop-filter: blur(10px);
     background-color: rgba(0,0,0,.35);
     min-height: 100%;
-    height: auto;
 }
-form.login-box[data-v-19244df7] {
+form.login-box {
     color: #ffffff;
     padding: 20px 30px;
     text-align: center;
     margin: 0;
 }
 
-form.login-box[data-v-19244df7] > div.el-form-item .el-form-item__label {
+form.login-box > div.el-form-item .el-form-item__label {
     color: #ffffff !important;
 }
 .el-radio-button__orig-radio:checked + .el-radio-button__inner {
@@ -317,7 +317,7 @@ div[data-v-194abe54] {/*轉發的訊息*/
     border-radius: 15px;
 }
 
-.head[data-v-0239dd47] { /*左上角头像和搜索*/
+.head { /*左上角头像和搜索*/
     border-radius: 50px;
     margin-bottom: 5px;
 }
@@ -335,9 +335,9 @@ div[data-v-194abe54] {/*轉發的訊息*/
 .content a .root {
     transition: all ease 0.3s;
     border-radius: 55px;
-    padding-right: 15px;
+    padding: 0 20px 0 8px;
 }
-.root[data-v-0239dd47] {
+.panel.rooms-panel > .root {
     height: 100%;
     margin-bottom: 10px;
 }
@@ -434,10 +434,6 @@ div.stickers_dir[data-v-1d0d9516] {
     border: none!important;
 }
 
-.icalingua-theme-holder {
-    background: rgba(0,0,0,0)!important;
-}
-
 .root {
     border-radius: 10px;
     margin: 5px;
@@ -500,12 +496,13 @@ div.stickers_dir[data-v-1d0d9516] {
     padding-bottom: 80px;
 }
 
-div[data-v-cac5798a].vac-card-window {
+div.vac-card-window {
     margin: 10px;
     box-shadow: 0 0 20px rgba(0,0,0,0.2);
     border-radius: 10px;
     overflow: hidden;
     min-height: auto;
+    background: rgba(0,0,0,0.55);
 }
 
 .el-dialog {
@@ -537,12 +534,12 @@ div[data-v-cac5798a].vac-card-window {
     overflow: hidden;
 }
 
-.panel.rooms-panel.avatar-only > div.root > div.head[data-v-0239dd47] {
+.panel.rooms-panel.avatar-only > div.root > div.head {
     align-items: center;
     justify-content: center;
     background: none;
 }
-.panel.rooms-panel.avatar-only > div.root > div.head[data-v-0239dd47] .el-avatar.el-avatar--circle {
+.panel.rooms-panel.avatar-only > div.root > div.head .el-avatar.el-avatar--circle {
     border-width: 10px;
     border-color: var(--MainColor);
     border-style: solid;
@@ -553,18 +550,18 @@ div[data-v-cac5798a].vac-card-window {
     width: 0;
     border-radius: 0 25px 25px 0;
 }
-.panel.rooms-panel.avatar-only div.entry[data-v-7bdba32c] > div.right[data-v-7bdba32c] {
+.panel.rooms-panel.avatar-only div.entry > div.right {
     display: block;
 }
-.panel.rooms-panel.avatar-only div.entry[data-v-7bdba32c] > div.right[data-v-7bdba32c] > .flex.l1,
-.panel.rooms-panel.avatar-only div.entry[data-v-7bdba32c] > div.right[data-v-7bdba32c] > .flex > .desc {
+.panel.rooms-panel.avatar-only div.entry > div.right > .flex.l1,
+.panel.rooms-panel.avatar-only div.entry > div.right > .flex > .desc {
     display: none;
 }
-.panel.rooms-panel.avatar-only div.entry[data-v-7bdba32c] > div.right[data-v-7bdba32c] > .flex .el-badge {
+.panel.rooms-panel.avatar-only div.entry > div.right > .flex .el-badge {
     display: block;
     position: absolute;
     top: 40px;
-    right: -40px;
+    right: -30px;
 }
 
 .el-badge__content.is-fixed {
@@ -581,7 +578,7 @@ div[data-v-cac5798a].vac-card-window {
     --chat-message-color-timestamp: #878787!important;
 }
 
-.getting-history[data-v-cac5798a] {
+.getting-history {
     visibility: hidden;
 }
 
@@ -620,7 +617,7 @@ div.entry[data-v-7bdba32c]{
     margin-left: 8px;
 }
 
-div[data-v-cac5798a].icalingua-theme-holder {
+div.icalingua-theme-holder {
     --chat-message-color-timestamp: #9a9a9a                     !important; /*发送时间*/
     --chat-message-bg-color-selected: var(--MainColorPrimary)   !important;
     --chat-bg-color-input: #fffffff0                            !important;
