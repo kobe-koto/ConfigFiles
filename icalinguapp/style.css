@@ -377,19 +377,19 @@ div[data-v-6d975e7c].category.active .svg svg {
 .vac-message-card.vac-message-current .vac-text-timestamp {
     color: #efefef;
 }
-.grid>div[data-v-1d0d9516] {
+.grid > div {
     background-color: rgba(0,0,0,0)
 }
-.vac-message-deleted[data-v-7e38bde8] {
+.vac-message-deleted {
     background: #44444485 !important;
 }
 
-.container-search input[data-v-839ecda0] {
+.container-search input {
     border: none;
     border-radius: 20px;
 }
 
-div.head[data-v-1d0d9516] { /*表情面板*/
+div.head { /*表情面板*/
     height: 35px;
     min-height: 35px;
     padding: 0 0;
@@ -407,7 +407,7 @@ div.el-main.layout-v > div.panel.panel-right {
     margin: 10px 10px 10px 0;
     padding: 10px;
     backdrop-filter: blur(15px);
-    height: 100%;
+    height: 100% !important;
     box-sizing: border-box;
 }
 .bg .head {
