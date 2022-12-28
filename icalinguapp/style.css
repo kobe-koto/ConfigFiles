@@ -23,6 +23,16 @@ body {
     transition: all ease .45s;
 }
 
+aside.el-aside * {
+    transition: all ease 0.1s !important;
+}
+aside.el-aside {
+    padding: 10px 0 0 0;
+}
+.chat-group {
+    margin-top: 10px;
+}
+
 /*SMS Code Auth*/
 .el-drawer.btt {
     background-color: #1f1f1f;
@@ -77,6 +87,16 @@ span.el-icon-refresh-right {
 }
 div.panel.rooms-panel {
     backdrop-filter: blur(15px);
+}
+div.panel.rooms-panel > div > div.root > div.head {
+    border-radius: 50px;
+    padding: 0 10px 0 4px;
+}
+.vac-card-window .pace-activity {
+    border-top-color: var(--MainColor);
+    border-left-color: var(--MainColor);
+    bottom: 70px;
+    right: 16px;
 }
 
 div.el-dialog__wrapper {
@@ -317,10 +337,6 @@ div[data-v-194abe54] {/*轉發的訊息*/
     border-radius: 15px;
 }
 
-.head { /*左上角头像和搜索*/
-    border-radius: 50px;
-    margin-bottom: 5px;
-}
 
 .el-input--prefix .el-input__inner { /*Search*/
     border-radius: 25px;
@@ -539,16 +555,28 @@ div.vac-card-window {
     overflow: hidden;
 }
 
+.panel.rooms-panel.avatar-only > .root > .head {
+    display: none;
+}
+.panel.rooms-panel.avatar-only > .root {
+    margin-top: 0;
+}
+
 .panel.rooms-panel.avatar-only > div.root > div.head {
     align-items: center;
     justify-content: center;
     background: none;
 }
-.panel.rooms-panel.avatar-only > div.root > div.head .el-avatar.el-avatar--circle {
+.el-aside .head .el-avatar.el-avatar--circle {
     border-width: 10px;
     border-color: var(--MainColor);
     border-style: solid;
     box-sizing: content-box;
+}
+
+.el-aside .head { /*左上角头像和搜索*/
+    background-color: rgba(0,0,0,0);
+    margin-bottom: 5px;
 }
 
 .panel.rooms-panel.avatar-only .content a .root {
