@@ -28,9 +28,25 @@ aside.el-aside * {
 }
 aside.el-aside {
     padding: 10px 0 0 0;
+    width: 70px !important;
 }
 .chat-group {
     margin-top: 10px;
+    padding: 0 5px 0 5px;
+}
+.chat-group > a > div {
+    border-radius: 10px;
+    font-size: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.chat-group > a > div:hover, .chat-group > a > div.selected {
+    background-color: #272727;
+    transform: scale(1.05);
+}
+.chat-group > a > div, .chat-group > a > div.selected {
+    transition: all ease-in-out 0.3s;
 }
 
 /*SMS Code Auth*/
@@ -88,7 +104,7 @@ span.el-icon-refresh-right {
 div.panel.rooms-panel {
     backdrop-filter: blur(15px);
 }
-div.panel.rooms-panel > div > div.root > div.head {
+div.panel.rooms-panel > div.root > div.head {
     border-radius: 50px;
     padding: 0 10px 0 4px;
 }
@@ -233,7 +249,7 @@ div.vac-container-scroll {
     padding-top: 55px;
 }
 
-div[data-v-0f8ddd0e] {
+div#app > div[data-v-0f8ddd0e] {
     /*驗證消息*/
     background-color: rgba(0,0,0,.45);
     border-radius: 20px;
@@ -252,7 +268,7 @@ div.el-collapse-item,
 div#pane-groups.el-tab-pane>div>div.contact-entry-root,
 div.groupmember-content > div {
     transition: all ease .35s;
-    border-radius: 35px;
+    border-radius: 20px;
 }
 div.el-collapse-item,
 div.groupmember-content > div {
@@ -298,9 +314,10 @@ div.el-collapse-item__header.is-active {
 }
 
 div[data-v-194abe54] {/*轉發的訊息*/
-    margin-top: 0!important;
-    margin: 10px;
-    border-radius: 10px;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    height: 100vh !important;
+    overflow: auto !important;
 }
 
 .el-button {
@@ -309,7 +326,9 @@ div[data-v-194abe54] {/*轉發的訊息*/
     color: #f8f8ff;
     border-radius: 25px;
 }
-.el-button:hover {
+.el-button:hover,
+.el-button.el-button--primary.is-active
+.el-button.is-active {
     background-color: var(--MainColorPrimary);
     border-color: var(--MainColorPrimary);
     color: #ffffff;
@@ -361,6 +380,7 @@ div.entry[data-v-7bdba32c] {
     padding: 6px 0;
 }
 .vac-textarea {
+    transition: padding-left 0.45s ease 0s !important;
     border-radius: 25px;
     color: #ffffff;
     background-color: #232323;
@@ -568,7 +588,7 @@ div.vac-card-window {
     background: none;
 }
 .el-aside .head .el-avatar.el-avatar--circle {
-    border-width: 10px;
+    border-width: 6px;
     border-color: var(--MainColor);
     border-style: solid;
     box-sizing: content-box;
