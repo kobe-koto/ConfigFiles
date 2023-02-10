@@ -669,6 +669,10 @@ div.entry[data-v-7bdba32c]{
     margin-right: 8px;
     margin-left: 8px;
 }
+.vac-mouse-select-area,
+.panel.rooms-panel {
+    transition: none !important;
+}
 
 div.icalingua-theme-holder {
     --chat-message-color-timestamp: #9a9a9a                     !important; /*发送时间*/
